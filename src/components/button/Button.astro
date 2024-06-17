@@ -11,9 +11,15 @@ interface Props {
 }
 
 const { path, alt, site } = Astro.props;
-const linked = path.startsWith("http://") || path.startsWith("https://");
+const linked = path.startsWith("http://") || path.startsWith("https://") || path.startsWith("//");
 ---
 
 <a href={site}>
     {linked ? <LinkedButtonImage path={path} alt={alt} /> : <ButtonImage path={path} alt={alt} />}
 </a>
+
+<style>
+    a {
+        text-decoration: none;
+    }
+</style>
