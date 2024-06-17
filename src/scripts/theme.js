@@ -3,19 +3,6 @@ const ctx = canvas.getContext('2d');
 let gl = canvas.getContext('webgl');
 
 let currentTheme;
-let currentThemeName;
-
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    if (currentThemeName) {
-        switchTheme(currentThemeName); // hack
-    }
-}
-
-// Resize the canvas to fill browser window dynamically
-window.addEventListener('resize', resizeCanvas, false);
-resizeCanvas();
 
 function hsvToRgb(h, s, v) {
     var r, g, b, i, f, p, q, t;
@@ -112,10 +99,17 @@ class StarryNightTheme extends BackgroundTheme {
 }
 
 
+function setupTheme() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    currentTheme = new StarryNightTheme(ctx, canvas, gl);
+    currentTheme.initialize();
+    currentTheme.start();
+}
 
-currentTheme = new StarryNightTheme(ctx, canvas, gl);
-currentTheme.initialize();
-currentTheme.start();
+// Resize the canvas to fill browser window dynamically
+window.addEventListener('resize', setupTheme);
+setupTheme();
 
 function decodeEmail(emailElement, buttonElement) {
     let decodedEmail = '';
