@@ -1,51 +1,66 @@
 ---
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-	</head>
+	</head><canvas id="stars"></canvas>
+
 	<body>
 		<slot />
 	</body>
+	<script src="../scripts/theme.js"></script>
 </html>
+
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+	@font-face {
+		font-family: "ibm-vga8";
+		src: url("/fonts/PxPlus_IBM_VGA8.ttf");
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		background-color: #282a36;
+		margin: 0;
+		padding: 0;
+		font-family: "ibm-vga8";
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	canvas {
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+	a:link {
+		color: #7f8c8d;
+	}
+	a:visited {
+		color: #646464;
+	}
+	a:hover {
+		color: #2d8653;
+	}
+	a:active {
+		color: #ff0000;
+	}
+
+	ul {
+		list-style-type: square;
 	}
 </style>

@@ -1,0 +1,19 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import ButtonImage from './ButtonImage.astro';
+import LinkedButtonImage from './LinkedButtonImage.astro'
+
+interface Props {
+   path: string;
+   alt: string;
+   site: string;
+}
+
+const { path, alt, site } = Astro.props;
+const linked = path.startsWith("http://") || path.startsWith("https://");
+---
+
+<a href={site}>
+    {linked ? <LinkedButtonImage path={path} alt={alt} /> : <ButtonImage path={path} alt={alt} />}
+</a>

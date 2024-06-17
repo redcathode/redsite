@@ -1,0 +1,13 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+   path: string;
+   alt: string;
+}
+
+let { path, alt } = Astro.props;
+---
+
+<Image src={path} alt={alt} title={alt} width="88" height="31" />
