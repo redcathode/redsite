@@ -3,7 +3,7 @@
 ---
 
 <h2>hi there</h2>
-<p>i'm max, or red<sup>(he/they)</sup>, sometimes known by the moniker redcathode.</p>
+<p>i'm red<sup>(he/it)</sup>, sometimes known by the moniker redcathode.</p>
 <p>i have a lot of interests, most of them engineering-related. i might put a bit more here at some point, but for now this site is mostly just a collection of links :p</p>
 <h3 id="projects-header">main things</h3>
 <ul>
@@ -25,10 +25,10 @@
 <!-- <li><strong>revolt:</strong> max#0904</li> -->
     <li><strong>xmpp:</strong> <a href="xmpp:max@wetdry.world" >max@wetdry.world</a> (would recommend using matrix or discord instead; i don't check this often)</li>
     <li><strong>github:</strong> <a href="https://github.com/redcathode">github.com/redcathode</a></li>
-    <li><strong>email (rot13'd): </strong>
+    <li id="emailtext"><strong>email (rot13'd): </strong>
         <span id="email1">znk@o0ivx.qri</span>
-        <button id="decodebutton1" class="decode-button" onclick="decodeEmail(document.getElementById('email1'), document.getElementById('decodebutton1'))">decode</button>
-        </li>
+        <button id="decodebutton1" class="decode-button">decode</button>
+    </li>
     <li><strong>pgp key:</strong> <a href="crypto/default.asc">here</a> (also on <a href="https://keys.openpgp.org/search?q=max%40b0vik.dev">keys.openpgp.org</a>)</li>
 </ul>
 <h3>specs</h3>
@@ -99,6 +99,8 @@
     <li>we should improve society somewhat.</li>
 </ul>
 
+<script src="../scripts/email.js"></script>
+
 <style>
     summary:hover,
     summary:active,
@@ -126,7 +128,7 @@
         border-radius: 0px; /* Border radius to match theme selector */
         cursor: pointer; /* Change cursor to pointer on hover */
         transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effects */
-        font-family: "perfect_dos_vga";
+        font-family: "ibm-vga8";
         font-size: inherit;
     }
 

@@ -110,19 +110,3 @@ function setupTheme() {
 // Resize the canvas to fill browser window dynamically
 window.addEventListener('resize', setupTheme);
 setupTheme();
-
-function decodeEmail(emailElement, buttonElement) {
-    let decodedEmail = '';
-    let encodedEmail = emailElement.innerHTML;
-    for (let i = 0; i < encodedEmail.length; i++) {
-        let charCode = encodedEmail.charCodeAt(i);
-        if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
-            let offset = (charCode >= 97) ? 97 : 65;
-            decodedEmail += String.fromCharCode((charCode - offset + 13) % 26 + offset);
-        } else {
-            decodedEmail += encodedEmail[i];
-        }
-    }
-    emailElement.outerHTML = `<a href="mailto:${decodedEmail}">${decodedEmail}</a>`
-    buttonElement.remove();
-}
