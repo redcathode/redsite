@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from '../components/button/Button.astro';
+---
+<Layout title="b" description="add my button!!1">
+    <main>
+        <h3>add my button! (if you want to)</h3>
+        <p>feel free to hotlink or download it; i probably won't change it any time soon. </p><p>here's an embed: (click to copy)</p>
+        <textarea readonly="" rows="6" cols="83" id="embedarea">
+            <a href="https://redcatho.de"><picture>
+                <source srcset="https://redcatho.de/buttons/red.webp" type="image/webp">
+                <img src="https://redcatho.de/buttons/red.png" width="88" height="31" alt="the text 'red is purple' on a purple background">
+              </picture></a>
+        </textarea>
+        <br><br>
+        <Button path="red.png" alt="the text &quot;red is purple&quot; on a purple background" site="https://redcatho.de" />
+        <br><br>
+    </main>
+    <script>
+        let copyText = document.getElementById("embedarea");
+        copyText.onclick = function() {
+            copyText.select();
+            navigator.clipboard.writeText(copyText.textContent);
+        }
+    </script>
+</Layout>
+
