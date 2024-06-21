@@ -10,7 +10,10 @@ const entries = await getCollection('blog');
         <h3>assorted inane ramblings</h3>
         {entries.map(entry => (
             <div class="listing">
-                <a style="float: left; margin: 0; padding: 0; font-size: 18px;" href={`/blog/${entry.slug}`} >{entry.data.title}</a>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <a style="float: left; margin: 0; padding: 0; font-size: 18px;" href={`/blog/${entry.slug}`} >{entry.data.title}</a>
+                    <p style="float: right; margin: 0; padding: 0; font-size: 18px;">published {entry.data.date}</p>
+                </div>
                 <br />
                 <p>{entry.data.description}</p>
 
