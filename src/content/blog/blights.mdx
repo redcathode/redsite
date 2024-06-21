@@ -47,6 +47,7 @@ To the horror and disappointment of everyone reading this, I decided this was pr
 <Picture src={earlyInstallationReservoir} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="an uncovered plastic bucket filled with water sitting inside a cabinet. there are two latex tubes running from a hole in the top of the cabinet into the bucket, as well as a temperature probe" />
 <br />
 <Picture src={earlyInstallationTop} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="the top of a cabinet. there's a boost converter wired to an aquarium pump that's sitting in a planter and a couple of giant LEDs mounted to a water cooling block, as well as a benchtop power supply to the far right" />
+<p style="text-align: center;">why is the pump just sitting in a planter? your guess is as good as mine</p>
 
 And that was about enough to turn it on! It's not mounted yet&mdash;the array is literally just sitting flat on the top of a cabinet&mdash;but it's so ridiculously bright that you can sort of get global illumination just by pointing it anywhere. (though my walls being painted white definitely helped out a bit)
 
@@ -119,11 +120,23 @@ Finally, we can get around to actually mounting this thing. I took some measurem
 
 ### not blowing up
 I still wanted to make sure that, should the cooling system fail for one reason or another, the array wouldn't start a fire, so I put a temperature probe on the array and set up an interrupt to watch the temperature and turn it off if it ever exceeded 65°C.  
-  
+
 With that out of the way, there's still one major problem: the cooling system doesn't have any mechanism installed to actually dissipate the heat it carries away, so it's essentially just dumping all of it into the reservoir. I could probably just install a fan and radiator, (and I plan on doing that eventually) 
 but how long would it take for something bad to happen if I didn't? I worked out a rough, worst-case estimate:
 
-
+---
+okay, 1am red here. i've spent the past few hours migrating this blog over to astro, but i don't really feel like setting up katex rn. for now, enjoy this beautiful and overall incredibly well-written latex:
+```
+$$
+10\mathrm{\,L}
+\cdot(60\mathrm{°C} - 20\mathrm{°C})
+\cdot\frac{4182\space\mathrm{joules}}{\mathrm{L\cdot °C}} 
+\cdot\frac{\mathrm{1\space sec}}{\mathrm{300\space joules}}
+\cdot\frac{1\space\mathrm{hour}}{3600\space\mathrm{seconds}}
+\approx1.6\space\mathrm{hours}
+$$
+```
+---
 
 Not great, but *okayish* for the moment given that we probably won't be operating at that high of a power level for more than 30 minutes at a time every 24 hours.
 
