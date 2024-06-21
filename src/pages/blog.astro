@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from 'astro:content';
+const entries = await getCollection('blog');
+// console.log(entries);
+---
+<Layout title="blog" description="assorted inane ramblings">
+    <main>
+        <a id="returnbutton" href="/">&lt; back</a>
+        <h3>assorted inane ramblings</h3>
+        {entries.map(entry => (
+            <div class="listing">
+                <a style="float: left; margin: 0; padding: 0; font-size: 18px;" href={`/blog/${entry.slug}`} >{entry.data.title}</a>
+                <br />
+                <p>{entry.data.description}</p>
+
+            </div>
+        ))}
+        <br />
+
+    </main>
+    <script>
+
+    </script>
+    <style is:global>
+        .listing {
+            margin-top: 20px;
+            padding: 10px;
+            padding-bottom: 0px;
+            border: 2px solid rgba(40, 42, 54, 0.94);
+            border-radius: 0px;
+            background-color: rgba(40, 42, 54, 0.5);
+        }
+    </style>
+    <style>
+        h3 {
+            padding-left: 2px;
+        }
+    </style>
+</Layout>
