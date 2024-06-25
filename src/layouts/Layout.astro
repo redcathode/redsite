@@ -19,18 +19,77 @@ const { title, description } = Astro.props;
 	</head><canvas id="stars"></canvas>
 
 	<body>
-		<slot />
+		<main>
+			<br />
+			<div class="fontsel" style="display: flex; align-items: center; justify-content: space-between;">
+				<div>
+					<p style="float: left; font-size: 18px; margin: 0; padding: 0;">fonts:</p>
+				</div>	
+				<!-- <div> -->
+					<a class="fontlink" style="font-family: 'atkinson-hyperlegible'" onclick="switchFont('atkinson-hyperlegible');">atkinson.hyperlegible</a> 
+					<a class="fontlink" style="font-family: 'ibm-vga8'" onclick="switchFont('ibm-vga8');">ibm.vga8</a> 
+					<a class="fontlink" style="font-family: 'opendyslexic'" onclick="switchFont('opendyslexic');">opendyslexic</a> 
+					<a class="fontlink" style="font-family: 'vollkorn'" onclick="switchFont('vollkorn');">vollkorn</a> 
+				<!-- </div> -->
+			<div style="display: flex; justify-content: center;">
+				<a class="fontlink" id="disbg" style="align: center !important;">click to disable background</a>
+			</div>
+			</div>
+			<hr />
+			<slot />
+		</main>
+		
 	</body>
 	<script src="../scripts/theme.js"></script>
+	<script is:inline>
+		const font = localStorage.getItem('font');
+		if (font) {
+			switchFont(font);
+		}
+		function switchFont(font) {
+			document.body.style.fontFamily = font;
+			localStorage.setItem('font', font);
+		}
+	</script>
 </html>
 
 <style is:global>
+	main {
+		padding-top: 0px !important;
+	}
 	@font-face {
 		font-family: "ibm-vga8";
 		src: url("/fonts/PxPlus_IBM_VGA8.woff"), format('woff');
 		font-weight: normal;
 		font-style: normal;
 		font-display: swap;
+	}
+	@font-face {
+		font-family: "atkinson-hyperlegible";
+		src: url("/fonts/AtkinsonHyperlegible.woff"), format('woff');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "vollkorn";
+		src: url("/fonts/Vollkorn.woff"), format('woff');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "opendyslexic";
+		src: url("/fonts/OpenDyslexic-Regular.woff2"), format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+	.fontlink {
+		float: right; 
+		margin: 0; 
+		padding: 0; 
+		font-size: 18px;
 	}
 	html {
 		background-color: #282a36;

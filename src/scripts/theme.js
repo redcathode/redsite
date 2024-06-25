@@ -110,3 +110,32 @@ function setupTheme() {
 // Resize the canvas to fill browser window dynamically
 window.addEventListener('resize', setupTheme);
 setupTheme();
+
+let bgenabled = localStorage.getItem('bgenabled');
+let disableButton = document.getElementById('disbg');
+
+// default to enabled
+if (bgenabled === 'false') {
+    disable();
+} else {
+    enable();
+}
+
+disableButton.addEventListener('click', () => {
+    // toggle theme
+    currentTheme ? disable() : enable();
+});
+
+function enable() {
+    setupTheme();
+    canvas.style.display = 'block';
+    disableButton.innerHTML = 'click to disable background';
+    localStorage.setItem('bgenabled', 'true');
+}
+
+function disable() {
+    currentTheme = null;
+    canvas.style.display = 'none';
+    disableButton.innerHTML = 'click to enable background';
+    localStorage.setItem('bgenabled', 'false');
+}
