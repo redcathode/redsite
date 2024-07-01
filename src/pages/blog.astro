@@ -5,9 +5,13 @@ const entries = await getCollection('blog');
 // console.log(entries);
 ---
 <Layout title="blog" description="assorted inane ramblings">
-    <main>
         <a id="returnbutton" href="/">&lt; back</a>
-        <h3>assorted inane ramblings</h3>
+        <br />
+        <br />
+        <div class="title" style="display: flex; align-items: center; justify-content: space-between;">
+            <p style="float: left; font-size: 18px; margin: 0; padding: 0;">assorted inane ramblings</p>
+            <a style="float: right; margin: 0; padding: 0; font-size: 18px;" href="/blog/rss.xml">rss</a> 
+        </div>
         {entries.map(entry => (
             <div class="listing">
                 <div style="display: flex; align-items: center; justify-content: space-between;">
@@ -21,7 +25,6 @@ const entries = await getCollection('blog');
         ))}
         <br />
 
-    </main>
     <script>
 
     </script>

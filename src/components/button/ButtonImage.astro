@@ -13,4 +13,4 @@ path = `/src/images/buttons/${path}`
 if (!buttons[path]) throw new Error(`"${path}" does not exist in glob: "src/images/buttons/*.{jpeg,jpg,png,gif,webp,apng}"`);
 ---
 
-{path.endsWith("gif") ? <Picture src={buttons[path]()} formats={['webp']} alt={alt} title={alt} width="88" height="31" quality="100"/> : <Picture src={buttons[path]()} formats={['avif', 'webp']} alt={alt} title={alt} width="88" height="31" quality="100" />}
+{path.endsWith("gif") ? <Picture src={buttons[path]()} formats={['webp']} alt={alt} width="88" height="31" quality="100"/> : <Picture src={buttons[path]()} formats={['avif', 'webp']} alt={alt} width="88" height="31" quality="100" />}
