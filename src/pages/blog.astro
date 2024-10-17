@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from 'astro:content';
-const entries = await getCollection('blog');
+const all = await getCollection('blog');
+const entries = all.filter((entry) => entry.data.published);
 // console.log(entries);
 ---
 <Layout title="blog" description="assorted inane ramblings">
@@ -13,6 +14,7 @@ const entries = await getCollection('blog');
             <a style="float: right; margin: 0; padding: 0; font-size: 18px;" href="/blog/rss.xml">rss</a> 
         </div>
         {entries.map(entry => (
+
             <div class="listing">
                 <div style="display: flex; align-items: center; justify-content: space-between;">
                     <a style="float: left; margin: 0; padding: 0; font-size: 18px;" href={`/blog/${entry.slug}`} >{entry.data.title}</a>
