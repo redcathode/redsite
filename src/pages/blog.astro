@@ -1,35 +1,49 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getCollection } from 'astro:content';
-const all = await getCollection('blog');
+import { getCollection } from "astro:content";
+const all = await getCollection("blog");
 const entries = all.filter((entry) => entry.data.published);
 // console.log(entries);
 ---
-<Layout title="blog" description="assorted inane ramblings">
-        <a id="returnbutton" href="/">&lt; back</a>
-        <br />
-        <br />
-        <div class="title" style="display: flex; align-items: center; justify-content: space-between;">
-            <p style="float: left; font-size: 18px; margin: 0; padding: 0;">assorted inane ramblings</p>
-            <a style="float: right; margin: 0; padding: 0; font-size: 18px;" href="/blog/rss.xml">rss</a> 
-        </div>
-        {entries.map(entry => (
 
+<Layout title="blog" description="assorted inane ramblings">
+    <a id="returnbutton" href="/">&lt; back</a>
+    <br />
+    <br />
+    <div
+        class="title"
+        style="display: flex; align-items: center; justify-content: space-between;"
+    >
+        <p style="float: left; font-size: 18px; margin: 0; padding: 0;">
+            writings
+        </p>
+        <a
+            style="float: right; margin: 0; padding: 0; font-size: 18px;"
+            href="/blog/rss.xml">rss</a
+        >
+    </div>
+    {
+        entries.map((entry) => (
             <div class="listing">
                 <div style="display: flex; align-items: center; justify-content: space-between;">
-                    <a style="float: left; margin: 0; padding: 0; font-size: 18px;" href={`/blog/${entry.slug}`} >{entry.data.title}</a>
-                    <p style="float: right; margin: 0; padding: 0; font-size: 18px;">published {entry.data.date}</p>
+                    <a
+                        style="float: left; margin: 0; padding: 0; font-size: 18px;"
+                        href={`/blog/${entry.slug}`}
+                    >
+                        {entry.data.title}
+                    </a>
+                    <p style="float: right; margin: 0; padding: 0; font-size: 18px;">
+                        published {entry.data.date}
+                    </p>
                 </div>
                 <br />
                 <p style="margin-top: 0;">{entry.data.description}</p>
-
             </div>
-        ))}
-        <br />
+        ))
+    }
+    <br />
 
-    <script>
-
-    </script>
+    <script></script>
     <style is:global>
         .listing {
             margin-top: 20px;

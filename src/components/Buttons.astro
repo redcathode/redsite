@@ -1,43 +1,167 @@
 ---
-import ButtonImage from './button/ButtonImage.astro';
-import Button from './button/Button.astro';
-
+import ButtonImage from "./button/ButtonImage.astro";
+import Button from "./button/Button.astro";
 ---
+
 <div class="button-list">
-    <Button path="red.png" alt="the text 'red is purple' on a purple background" site="/add-button" />
-    <Button path="slonk.apng" alt="an animation alternating between the shell prompt [slonk ~]$ and the text 'slonk.ing,' with some purple-and-white decorations on the top and bottom" site="//slonk.ing" />
-    <Button path="nikolan.png" alt="'nikolan' on a green background" site="//nikolan.xyz" />
-    <Button path="unnick.png" alt="the text 'beep boop bip bop :3 ^w^ mrrp' next to a drawing of (i think?) unnick's fursona" site="//unnick.mice.tel" />
-    <Button path="trinkey.png" alt="the text 'trinkey' laid over a stretched out picture of a cat" site="//trinkey.web.app" />
+    <Button
+        path="red.png"
+        alt="the text 'red is purple' on a purple background"
+        site="/add-button"
+    />
+    <Button
+        path="slonk.apng"
+        alt="an animation alternating between the shell prompt [slonk ~]$ and the text 'slonk.ing,' with some purple-and-white decorations on the top and bottom"
+        site="//slonk.ing"
+    />
+    <Button
+        path="nikolan.png"
+        alt="'nikolan' on a green background"
+        site="//nikolan.xyz"
+    />
+    <Button
+        path="unnick.png"
+        alt="the text 'beep boop bip bop :3 ^w^ mrrp' next to a drawing of (i think?) unnick's fursona"
+        site="//unnick.mice.tel"
+    />
+    <Button
+        path="trinkey.png"
+        alt="the text 'trinkey' laid over a stretched out picture of a cat"
+        site="//trinkey.web.app"
+    />
     <Button path="chloe.png" alt="chloe vea.st" site="//vea.st" />
-    <Button path="//damcraft.de/assets/88x31/dam.gif" alt="the text 'dam' in bluish minecraft text moving from left to right before portalling back to the left of the button. there's an orange line on the far left and a blue one on the far right, in a way that resembles portal" site="//damcraft.de" />
-    <Button path="//velzie.rip/88x31.png" alt="'velzie' next to pixel art of lamp lighter from oneshot, with what seems like a gallon jug of coffee in hand, staring out into a corru.observer-esque void" site="//velzie.rip/" />
+    <Button
+        path="//damcraft.de/assets/88x31/dam.gif"
+        alt="the text 'dam' in bluish minecraft text moving from left to right before portalling back to the left of the button. there's an orange line on the far left and a blue one on the far right, in a way that resembles portal"
+        site="//damcraft.de"
+    />
+    <Button
+        path="//velzie.rip/88x31.png"
+        alt="'velzie' next to pixel art of lamp lighter from oneshot, with what seems like a gallon jug of coffee in hand, staring out into a corru.observer-esque void"
+        site="//velzie.rip/"
+    />
     <Button path="abtmtr.png" alt="todo" site="//abtmtr.link" />
-    <Button path="aubreyrs.png" alt="the text 'aubrey' next to ascii art of a pink butterfly" site="//aubrey.rs" />
-    <Button path="restart.png" alt="the text 'restart' on top of a zoomed-in image of wheatley from portal 2" site="//restartb.github.io" />
-    <Button path="mudkip.png" alt="the text 'mudkip' in rainbow font" site="//mudkip.dev" />
-    <Button path="notfire.png" alt="the text 'notfire.cc' next to a lil stick figure with a red baseball cap riding a purple skateboard" site="//notfire.cc" />
-    <Button path="ees4.png" alt="the text 'ees4.dev(tm)' on a black background" site="//ees4.dev" />
-    <Button path="cbax.png" alt="the text 'cbax' on a blue background" site="//cbax.dev" />
+    <Button
+        path="aubreyrs.png"
+        alt="the text 'aubrey' next to ascii art of a pink butterfly"
+        site="//aubrey.rs"
+    />
+    <Button
+        path="restart.png"
+        alt="the text 'restart' on top of a zoomed-in image of wheatley from portal 2"
+        site="//restartb.github.io"
+    />
+    <Button
+        path="mudkip.png"
+        alt="the text 'mudkip' in rainbow font"
+        site="//mudkip.dev"
+    />
+    <Button
+        path="notfire.png"
+        alt="the text 'notfire.cc' next to a lil stick figure with a red baseball cap riding a purple skateboard"
+        site="//notfire.cc"
+    />
+    <Button
+        path="ees4.png"
+        alt="the text 'ees4.dev(tm)' on a black background"
+        site="//ees4.dev"
+    />
+    <Button
+        path="cbax.png"
+        alt="the text 'cbax' on a blue background"
+        site="//cbax.dev"
+    />
     <Button path="magmaus3.gif" alt="magmaus3" site="//magmaus3.eu.org" />
-    <Button path="mat.png" alt="the text 'mat does dev!' with 'dev!' in larger red font. there's a drawing of netscape's logo with the 'n' replaced with an n and a stripe in the bottom right with ':3' on it" site="//matdoes.dev/retro" />
-    <Button path="golden_stack.png" alt="the text 'golden stack!' with 'stack!' in larger red font. there's a drawing of goldenstack's profile pic to the left and a red stripe in the bottom right with the text '1.0'" site="//goldenstack.net" />
-    <Button path="ammar.png" alt="the text 'amr' with a reversed 'r' next to a white crescent moon" site="//ammar.win" />
-    <Button path="//authenyo.xyz/images/button.gif" alt="the text 'authen' next to a spinning cube of (i think) a blurry picture of authen's cat" site="//authenyo.xyz" />
-    <Button path="760ce.png" alt="760ce's uuid with neko arc by the side" site="//760ceb3b9c0ba4872cadf3ce35a7a494.neocities.org/" />
-    <Button path="lars.png" alt="'hi i'm lars' next to lars' profile pic as of 2024-06-17" site="//larsfrommars.neocities.org" />
-    <Button path="notnite.png" alt="'notnite' on a checkered background" site="//notnite.com" />
-    <Button path="essem.png" alt="the text 'essem' next to a drawing of essem's profile pic" site="//essem.space" />
-    <Button path="maia.crimew.gay.png" alt="the text maia.crimew.gay next to pixel art of a white cat with black spots" site="//maia.crimew.gay/" />
-    <Button path="//ssi.fyi/88x31.gif" alt="'server scanning inc' in minecraft font with a green radar spinning around in the background" site="//ssi.fyi" />
-    <Button path="//corru.observer/8831.gif" alt="an animation that displays pixel art of what looks like a close-up of a face before switching to the text 'corru.observer' next to a barcode with a corrucyst in the background" site="//corru.observer" />
-    <Button path="eighty.png" alt="the text 'eightyeightthirty.one' overlaid over several differently-colored spheres" site="//eightyeightthirty.one" />
-    <a href="https://hwii.net/"><img src="/images/8831/hwii.png" alt="hwii" title="i'm sorry"></a>
-    <ButtonImage path="adhd.png" alt="'adhd' on a white-and-yellow background" />
-    <iframe src="//incr.easrng.net/badge?key=b0vik" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe>
-    <Button path="arch.png" alt="the text 'archlinux' next to the old arch linux logo" site="//archlinux.org/" />
-    <Button path="rockbox.png" alt="the rockbox logo" site="//www.rockbox.org/" />
+    <Button
+        path="mat.png"
+        alt="the text 'mat does dev!' with 'dev!' in larger red font. there's a drawing of netscape's logo with the 'n' replaced with an n and a stripe in the bottom right with ':3' on it"
+        site="//matdoes.dev/retro"
+    />
+    <Button
+        path="golden_stack.png"
+        alt="the text 'golden stack!' with 'stack!' in larger red font. there's a drawing of goldenstack's profile pic to the left and a red stripe in the bottom right with the text '1.0'"
+        site="//goldenstack.net"
+    />
+    <Button
+        path="ammar.png"
+        alt="the text 'amr' with a reversed 'r' next to a white crescent moon"
+        site="//ammar.win"
+    />
+    <Button
+        path="//authenyo.xyz/images/button.gif"
+        alt="the text 'authen' next to a spinning cube of (i think) a blurry picture of authen's cat"
+        site="//authenyo.xyz"
+    />
+    <Button
+        path="760ce.png"
+        alt="760ce's uuid with neko arc by the side"
+        site="//760ceb3b9c0ba4872cadf3ce35a7a494.neocities.org/"
+    />
+    <Button
+        path="lars.png"
+        alt="'hi i'm lars' next to lars' profile pic as of 2024-06-17"
+        site="//larsfrommars.neocities.org"
+    />
+    <Button
+        path="notnite.png"
+        alt="'notnite' on a checkered background"
+        site="//notnite.com"
+    />
+    <Button
+        path="essem.png"
+        alt="the text 'essem' next to a drawing of essem's profile pic"
+        site="//essem.space"
+    />
+    <Button
+        path="maia.crimew.gay.png"
+        alt="the text maia.crimew.gay next to pixel art of a white cat with black spots"
+        site="//maia.crimew.gay/"
+    />
+    <Button
+        path="//ssi.fyi/88x31.gif"
+        alt="'server scanning inc' in minecraft font with a green radar spinning around in the background"
+        site="//ssi.fyi"
+    />
+    <Button
+        path="//corru.observer/8831.gif"
+        alt="an animation that displays pixel art of what looks like a close-up of a face before switching to the text 'corru.observer' next to a barcode with a corrucyst in the background"
+        site="//corru.observer"
+    />
+    <Button
+        path="eighty.png"
+        alt="the text 'eightyeightthirty.one' overlaid over several differently-colored spheres"
+        site="//eightyeightthirty.one"
+    />
+    <a href="https://hwii.net/"
+        ><img src="/images/8831/hwii.png" alt="hwii" /></a
+    >
+    <!-- <ButtonImage
+        path="adhd.png"
+        alt="'adhd' on a white-and-yellow background"
+    /> -->
+    <iframe
+        src="//incr.easrng.net/badge?key=b0vik"
+        style="background: url(//incr.easrng.net/bg.gif)"
+        title="increment badge"
+        width="88"
+        height="31"
+        frameborder="0"></iframe>
+    <!-- <Button
+        path="arch.png"
+        alt="the text 'archlinux' next to the old arch linux logo"
+        site="//archlinux.org/"
+    /> -->
+    <!-- <Button
+        path="rockbox.png"
+        alt="the rockbox logo"
+        site="//www.rockbox.org/"
+    /> -->
 </div>
+<p style="text-align: center;">
+    <a href="https://ring.ssi.fyi/previous?host=redcatho.de">←</a>
+    <a href="https://ring.ssi.fyi/">SSI</a>
+    <a href="https://ring.ssi.fyi/next?host=redcatho.de">→</a>
+</p>
 
 <style>
     .button-list {

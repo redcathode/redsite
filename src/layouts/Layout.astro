@@ -1,7 +1,7 @@
 ---
 interface Props {
-	title: string;
-	description: string;
+    title: string;
+    description: string;
 }
 
 const { title, description } = Astro.props;
@@ -9,155 +9,193 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head><canvas id="stars"></canvas>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head><canvas id="stars"></canvas>
 
-	<body>
-		<main>
-			<br />
-			<div class="fontsel" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; flex-grow: 1;">
-				<div>
-					<p style="float: left; font-size: 18px; margin: 0; padding: 0;">fonts:</p>
-				</div>	
-				<!-- <div> -->
-					<a class="fontlink" style="font-family: 'atkinson-hyperlegible'" onclick="switchFont('atkinson-hyperlegible');">atkinson.hyperlegible</a> 
-					<a class="fontlink" style="font-family: 'ibm-vga8'" onclick="switchFont('ibm-vga8');">ibm.vga8</a> 
-					<a class="fontlink" style="font-family: 'opendyslexic'" onclick="switchFont('opendyslexic');">opendyslexic</a> 
-					<a class="fontlink" style="font-family: 'vollkorn'" onclick="switchFont('vollkorn');">vollkorn</a> 
-				<!-- </div> -->
-			<div style="display: flex; justify-content: center;">
-				<a class="fontlink" id="disbg" style="align: center !important;">click to disable background</a>
-			</div>
-			</div>
-			<hr />
-			<slot />
-		</main>
-		<link style="display: none;" rel="me" href="https://abtmtr.link/blurbs/#_y0l5wooH_h_UeYuuUhafcQN_pq7FluI">
-	</body>
-	<script src="../scripts/theme.js"></script>
-	<script is:inline>
-		const font = localStorage.getItem('font');
-		if (font) {
-			switchFont(font);
-		}
-		function switchFont(font) {
-			document.body.style.fontFamily = font;
-			localStorage.setItem('font', font);
-		}
-	</script>
-	<script
-		defer
-		src="/scripts/unnamed.js"
-		data-website-id="bfbc0091-3b9d-492d-8833-a2f15cd24d37"
-  	></script>  
+    <body>
+        <main>
+            <!-- <br />
+            <div
+                class="fontsel"
+                style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; flex-grow: 1;"
+            >
+                <div>
+                    <p
+                        style="float: left; font-size: 18px; margin: 0; padding: 0;"
+                    >
+                        fonts:
+                    </p>
+                </div>
+                <a
+                    class="fontlink"
+                    style="font-family: 'atkinson-hyperlegible'"
+                    onclick="switchFont('atkinson-hyperlegible');"
+                    >atkinson.hyperlegible</a
+                >
+                <a
+                    class="fontlink"
+                    style="font-family: 'ibm-vga8'"
+                    onclick="switchFont('ibm-vga8');">ibm.vga8</a
+                >
+                <a
+                    class="fontlink"
+                    style="font-family: 'opendyslexic'"
+                    onclick="switchFont('opendyslexic');">opendyslexic</a
+                >
+                <a
+                    class="fontlink"
+                    style="font-family: 'vollkorn'"
+                    onclick="switchFont('vollkorn');">vollkorn</a
+                >
+                <div style="display: flex; justify-content: center;">
+                    <a
+                        class="fontlink"
+                        id="disbg"
+                        style="align: center !important;"
+                        >click to disable background</a
+                    >
+                </div>
+            </div>
+            <hr /> -->
+            <slot />
+        </main>
+        <link
+            style="display: none;"
+            rel="me"
+            href="https://abtmtr.link/blurbs/#_y0l5wooH_h_UeYuuUhafcQN_pq7FluI"
+        />
+    </body>
+    <script src="../scripts/theme.js"></script>
+    <script is:inline>
+        const font = localStorage.getItem("font");
+        if (font) {
+            switchFont(font);
+        }
+        function switchFont(font) {
+            document.body.style.fontFamily = font;
+            localStorage.setItem("font", font);
+        }
+    </script>
+    <script
+        defer
+        src="/scripts/unnamed.js"
+        data-website-id="bfbc0091-3b9d-492d-8833-a2f15cd24d37"></script>
+
+    <style is:global>
+        main {
+            padding-top: 0px !important;
+        }
+        @font-face {
+            font-family: "ibm-vga8";
+            src: url("/fonts/PxPlus_IBM_VGA8.woff"), format("woff");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "atkinson-hyperlegible";
+            src: url("/fonts/AtkinsonHyperlegible.woff"), format("woff");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "vollkorn";
+            src: url("/fonts/Vollkorn.woff"), format("woff");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "opendyslexic";
+            src: url("/fonts/OpenDyslexic-Regular.woff2"), format("woff2");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        .fontlink {
+            float: right;
+            margin: 0 5px;
+            padding: 0;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        html {
+            background-color: #282a36;
+            margin: 0;
+            padding: 0;
+            font-family: "atkinson-hyperlegible";
+        }
+        #returnbutton {
+            color: #d0d0d0;
+            text-decoration: none;
+        }
+        main {
+            max-width: calc(100% - 2rem);
+            color: #d0d0d0;
+            height: 100%;
+            overflow: auto;
+            position: relative;
+            max-width: calc(100% - 80px);
+            width: 60rem;
+            margin: 40px auto;
+            z-index: 5;
+            background-color: rgba(68, 71, 90, 0.94);
+            border: 2px solid rgba(60, 62, 74, 0.94);
+            border-radius: 0px;
+            padding: 20px;
+            padding-bottom: 0px;
+            letter-spacing: 1px;
+        }
+        textarea {
+            background-color: rgba(
+                40,
+                42,
+                54,
+                0.94
+            ); /* Match the theme selector background */
+            color: #d0d0d0; /* Text color */
+            padding: 2px 4px; /* Padding inside the button */
+            border: 2px solid rgba(25, 25, 25, 0.94); /* Border similar to theme selector */
+            border-radius: 0px; /* Border radius to match theme selector */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition:
+                background-color 0.3s ease,
+                border-color 0.3s ease; /* Smooth transition for hover effects */
+            font-family: "ibm-vga8";
+            font-size: inherit;
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        a:link {
+            color: #7f8c8d;
+        }
+        a:visited {
+            color: #646464;
+        }
+        a:hover {
+            color: #2d8653;
+        }
+        a:active {
+            color: #ff0000;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+    </style>
+
 </html>
-
-<style is:global>
-	main {
-		padding-top: 0px !important;
-	}
-	@font-face {
-		font-family: "ibm-vga8";
-		src: url("/fonts/PxPlus_IBM_VGA8.woff"), format('woff');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: "atkinson-hyperlegible";
-		src: url("/fonts/AtkinsonHyperlegible.woff"), format('woff');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: "vollkorn";
-		src: url("/fonts/Vollkorn.woff"), format('woff');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: "opendyslexic";
-		src: url("/fonts/OpenDyslexic-Regular.woff2"), format('woff2');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-	.fontlink {
-		float: right; 
-		margin: 0 5px; 
-		padding: 0; 
-		font-size: 18px;
-		cursor: pointer;
-	}
-	html {
-		background-color: #282a36;
-		margin: 0;
-		padding: 0;
-		font-family: "atkinson-hyperlegible";
-	}
-	#returnbutton {
-		color: #d0d0d0;
-		text-decoration: none;
-	}
-	main {
-		max-width: calc(100% - 2rem);
-		color: #d0d0d0;
-		height: 100%;
-		overflow: auto;
-		position: relative;
-		max-width: calc(100% - 80px);
-		width: 60rem;
-		margin: 40px auto;
-		z-index: 5;
-		background-color: rgba(68, 71, 90, 0.94);
-		border: 2px solid rgba(60, 62, 74, 0.94);
-		border-radius: 0px;
-		padding: 20px;
-		padding-bottom: 0px;
-		letter-spacing: 1px;
-	}
-	textarea {
-		background-color: rgba(40, 42, 54, 0.94); /* Match the theme selector background */
-        color: #d0d0d0; /* Text color */
-        padding: 2px 4px; /* Padding inside the button */
-        border: 2px solid rgba(25, 25, 25, 0.94); /* Border similar to theme selector */
-        border-radius: 0px; /* Border radius to match theme selector */
-        cursor: pointer; /* Change cursor to pointer on hover */
-        transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effects */
-        font-family: "ibm-vga8";
-        font-size: inherit;
-	}
-	canvas {
-		width: 100%;
-		height: 100%;
-		display: block;
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 0;
-	}
-	a:link {
-		color: #7f8c8d;
-	}
-	a:visited {
-		color: #646464;
-	}
-	a:hover {
-		color: #2d8653;
-	}
-	a:active {
-		color: #ff0000;
-	}
-
-	ul {
-		list-style-type: square;
-	}
-</style>
