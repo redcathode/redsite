@@ -18,9 +18,13 @@ import batterybank from '../../images/blog/portfolio/PXL_20250708_203230807.jpg'
 
 ## Programming
 
-I built [this website](https://github.com/redcathode/redsite) with [Astro](https://astro.build), which, among other things, lets me have Markdown, JSX, and an [RSS feed](https://redcatho.de/blog/rss.xml), while still serving my website as static files - pretty neat!
+I run Linux on almost every device I own, and am pretty familiar with sysadmin work - my usual stack is (Alpine or Fedora) + Docker Compose. I also have some experience with NixOS and with Debian and Arch-based distros.
 
+For embedded, I usually use PlatformIO or ESP-IDF - here's two respective examples:
+- https://github.com/redcathode/led-wall/blob/main/src/main.cpp
+- https://github.com/redcathode/blights_esp32_server/blob/main/main/esp_rest_main.c
 
+[This website](https://github.com/redcathode/redsite) was built with [Astro](https://astro.build), which, among other things, lets me have Markdown, JSX, and an [RSS feed](https://redcatho.de/blog/rss.xml), while still serving my website as static files - pretty neat!
 
 ## Electronics
 I generally don't design PCBs for one-off projects, but I sometimes need to fit parts into a very small form factor or break out an SMD-only part. Here's one such example of both, a small ATTiny1614 board I designed in KiCad for a handheld epaper watch in 2022:
@@ -35,7 +39,7 @@ Also from 2022: this funky-looking 200wh (!) USB-C power bank, consisting of a c
 
 <Picture src={batterybank} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
 
-A 900-watt water-cooled LED array (successor to [this 100w one](/blog/blights), mounted onto a bamboo scaffold. This was something of a rush job - for lack of an inexpensive solution that met my absurd power requirements, I made a bespoke PSU by strapping a stepper motor to a variac and then running it through a bridge rectifier. 
+A 900-watt water-cooled LED array (successor to [this 100w one](/blog/blights), mounted onto a bamboo scaffold. This was something of a rush job - for lack of an inexpensive solution that met my absurd power requirements, I made a bespoke PSU by strapping a stepper motor to a variac and then running it through a bridge rectifier.
 <div style="display: flex; align-items: center; gap: 1rem;">
 <Picture src={ledarraymodule} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
 <Picture src={ledarraypsu} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
