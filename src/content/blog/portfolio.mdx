@@ -30,22 +30,22 @@ For embedded, I usually use PlatformIO or ESP-IDF - here's two respective exampl
 I generally don't design PCBs for one-off projects, but I sometimes need to fit parts into a very small form factor or break out an SMD-only part. Here's one such example of both, a small ATtiny1614 board I designed in KiCad for a handheld epaper watch in 2022:
 
 <div style="display: flex; align-items: center; gap: 1rem;">
-<Picture src={attiny1} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
-<Picture src={attiny2} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
-<Picture src={attiny3} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
+<Picture src={attiny1} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="schematic"/>
+<Picture src={attiny2} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="silkscreen"/>
+<Picture src={attiny3} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="silkscreen with planes shown"/>
 </div>
 
 Also from 2022: this funky-looking 200wh (!) USB-C power bank, consisting of a custom-made enclosure housing a stack of 16 [EVE 33Vs](https://web.archive.org/web/20221111144707/https://bulkbattery.com/products/copy-of-eve-25p-18650-2500mah-20a-battery). I also ended up cobbling together a spot welder from some supercapacitors and MOSFETs I had lying around, but that has unfortunately since been repurposed into other projects.
 
-<Picture src={batterybank} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
+<Picture src={batterybank} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="a tank-like 3D printed battery pack"/>
 
 A 900-watt water-cooled LED array (successor to [this 100w one](/blog/blights), mounted onto a bamboo scaffold. This was something of a rush job - for lack of an inexpensive solution that met my absurd power requirements, I made a bespoke PSU by strapping a stepper motor to a variac and then running it through a bridge rectifier.
 <div style="display: flex; align-items: center; gap: 1rem;">
-<Picture src={ledarraymodule} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
-<Picture src={ledarraypsu} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
+<Picture src={ledarraymodule} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="LED array - 3d printed module alongside a COB LED and water cooling block"/>
+<Picture src={ledarraypsu} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="A variac, several busbars, a large stepper motor and controller, and a 12V power supply, all connected together"/>
 </div>
 <br />
-<Picture src={overheadview} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
+<Picture src={overheadview} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="far-away view of a bamboo scaffold upon which several lines of PVC and low-gauge wire run across"/>
 
 I have since recognized that this was a bit of a fire hazard; were I to do it again, I'd use an SMPS from the get-go, machine all-metal water cooling mounts, and, most importantly, build a proper metal enclosure rather than using bamboo I harvested from our neighbor's backyard.
 
