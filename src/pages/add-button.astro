@@ -1,30 +1,49 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Button from '../components/button/Button.astro';
+import Button from "../components/button/Button.astro";
 ---
-<Layout title="b" description="add my button!!1">
 
+<Layout title="b" description="add my button!!1">
+    <br />
     <a id="returnbutton" href="/">&lt; back</a>
     <h3>add my button! (if you want to)</h3>
-    <p>feel free to hotlink or download it; i probably won't change it any time soon. </p><p>here's an embed: (click to copy)</p>
+    <p>
+        feel free to hotlink or download it; i probably won't change it any time
+        soon.
+    </p><p>here's an embed: (click to copy)</p>
     <textarea readonly="" rows="5" cols="83" id="embedarea">
-<a href="https://redcatho.de"><picture>
-    <source srcset="https://redcatho.de/buttons/red.webp" type="image/webp">
-    <img src="https://redcatho.de/buttons/red.png" width="88" height="31" alt="the text 'red is purple' on a purple background">
-</picture></a></textarea>
-    <p>thanks to <a title="unnick's website" href="https://unnick.mice.tel">unnick's site</a> for teaching me about the &lt;picture&gt; tag<br>also, remember to set 'image-rendering: pixelated;' in css somewhere</p>
-    <a href="https://redcatho.de"><picture>
-        <source srcset="https://redcatho.de/buttons/red.webp" type="image/webp">
-        <img src="https://redcatho.de/buttons/red.png" width="88" height="31" alt="the text 'red is purple' on a purple background">
-        </picture></a>
-    <br><br>
+        <a href="https://redcatho.de"><picture> <source
+        srcset="https://redcatho.de/buttons/red.webp" type="image/webp"> <img
+        src="https://redcatho.de/buttons/red.png" width="88" height="31"
+        alt="the text 'red is purple' on a purple background"> </picture></a></textarea
+    >
+    <p>
+        thanks to <a title="unnick's website" href="https://unnick.mice.tel"
+            >unnick's site</a
+        > for teaching me about the &lt;picture&gt; tag<br />also, remember to
+        set 'image-rendering: pixelated;' in css somewhere
+    </p>
+    <a href="https://redcatho.de"
+        ><picture>
+            <source
+                srcset="https://redcatho.de/buttons/red.webp"
+                type="image/webp"
+            />
+            <img
+                src="https://redcatho.de/buttons/red.png"
+                width="88"
+                height="31"
+                alt="the text 'red is purple' on a purple background"
+            />
+        </picture></a
+    >
+    <br /><br />
 
-<script>
-    let copyText = document.getElementById("embedarea");
-    copyText.onclick = function() {
-        copyText.select();
-        navigator.clipboard.writeText(copyText.textContent);
-    }
-</script>
+    <script>
+        let copyText = document.getElementById("embedarea");
+        copyText.onclick = function () {
+            copyText.select();
+            navigator.clipboard.writeText(copyText.textContent);
+        };
+    </script>
 </Layout>
-

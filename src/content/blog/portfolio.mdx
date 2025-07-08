@@ -1,8 +1,38 @@
 ---
 title: portfolio
-description: todo
+description: a more exhaustive list of my past projects
 date: 'jul 7, 2025'
-published: false
+published: true
 ---
-### test
-test
+import { Image, Picture } from 'astro:assets';
+import attiny1 from '../../images/blog/portfolio/attiny1614-1.png';
+import attiny2 from '../../images/blog/portfolio/attiny1614-2.png';
+import attiny3 from '../../images/blog/portfolio/attiny1614-3.png';
+import ledarraymodule from '../../images/blog/portfolio/ledarray-module.jpg';
+import ledarraypsu from '../../images/blog/portfolio/ledarray-psu.jpg';
+import overheadview from '../../images/blog/portfolio/PXL_20240930_100234699.MP.jpg'
+import batterybank from '../../images/blog/portfolio/PXL_20250708_203230807.jpg';
+
+
+# Portfolio
+
+## Electronics
+I generally don't design PCBs for one-off projects, but I sometimes need to fit parts into a very small form factor or break out an SMD-only part. Here's one such example of both, a small ATTiny1614 board I designed in KiCad for a handheld epaper watch in 2022:
+
+<div style="display: flex; align-items: center; gap: 1rem;">
+<Picture src={attiny1} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
+<Picture src={attiny2} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
+<Picture src={attiny3} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
+</div>
+
+Also from 2022: this funky-looking 200wh (!) USB-C power bank, consisting of a custom-made enclosure housing a stack of 16 [EVE 33Vs](https://web.archive.org/web/20221111144707/https://bulkbattery.com/products/copy-of-eve-25p-18650-2500mah-20a-battery). I also ended up cobbling together a spot welder from some supercapacitors and MOSFETs I had lying around, but that has unfortunately since been repurposed into other projects.
+
+<Picture src={batterybank} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
+
+From late last year: a 900-watt water-cooled LED array, mounted onto a bamboo scaffold. This was something of a rush job - for lack of an inexpensive solution that met my absurd power requirements, I made a bespoke PSU by strapping a stepper motor to a variac and then running it through a bridge rectifier. I have since recognized that this was a bit of a fire hazard.
+<div style="display: flex; align-items: center; gap: 1rem;">
+<Picture src={ledarraymodule} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
+<Picture src={ledarraypsu} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
+</div>
+<br />
+<Picture src={overheadview} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>

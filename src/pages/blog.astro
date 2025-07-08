@@ -7,20 +7,21 @@ const entries = all.filter((entry) => entry.data.published);
 ---
 
 <Layout title="blog" description="assorted inane ramblings">
+    <br />
     <a id="returnbutton" href="/">&lt; back</a>
     <br />
-    <br />
+    <!-- <br /> -->
     <div
         class="title"
         style="display: flex; align-items: center; justify-content: space-between;"
     >
-        <p style="float: left; font-size: 18px; margin: 0; padding: 0;">
+        <!-- <p style="float: left; font-size: 18px; margin: 0; padding: 0;">
             writings
-        </p>
-        <a
+        </p> -->
+        <!-- <a
             style="float: right; margin: 0; padding: 0; font-size: 18px;"
             href="/blog/rss.xml">rss</a
-        >
+        > -->
     </div>
     {
         entries.map((entry) => (
