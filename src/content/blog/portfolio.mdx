@@ -18,7 +18,9 @@ import batterybank from '../../images/blog/portfolio/PXL_20250708_203230807.jpg'
 
 ## Programming
 
-todo
+I built [this website](https://github.com/redcathode/redsite) with [Astro](https://astro.build), which, among other things, lets me have Markdown, JSX, and an [RSS feed](https://redcatho.de/blog/rss.xml), while still serving my website as static files - pretty neat!
+
+
 
 ## Electronics
 I generally don't design PCBs for one-off projects, but I sometimes need to fit parts into a very small form factor or break out an SMD-only part. Here's one such example of both, a small ATTiny1614 board I designed in KiCad for a handheld epaper watch in 2022:
@@ -33,13 +35,18 @@ Also from 2022: this funky-looking 200wh (!) USB-C power bank, consisting of a c
 
 <Picture src={batterybank} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
 
-From late last year: a 900-watt water-cooled LED array, mounted onto a bamboo scaffold. This was something of a rush job - for lack of an inexpensive solution that met my absurd power requirements, I made a bespoke PSU by strapping a stepper motor to a variac and then running it through a bridge rectifier. I have since recognized that this was a bit of a fire hazard.
+A 900-watt water-cooled LED array (successor to [this 100w one](/blog/blights), mounted onto a bamboo scaffold. This was something of a rush job - for lack of an inexpensive solution that met my absurd power requirements, I made a bespoke PSU by strapping a stepper motor to a variac and then running it through a bridge rectifier. 
 <div style="display: flex; align-items: center; gap: 1rem;">
 <Picture src={ledarraymodule} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
 <Picture src={ledarraypsu} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
 </div>
 <br />
 <Picture src={overheadview} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="todo"/>
+
+I have since recognized that this was a bit of a fire hazard; were I to do it again, I'd use an SMPS from the get-go, machine all-metal water cooling mounts, and, most importantly, build a proper metal enclosure rather than using bamboo I harvested from our neighbor's backyard.
+
+I helped set up, manage, and maintain my school's 3D printing lab - speaking of which, here's a modified first-gen Ender 3 running at ~5x stock speed:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rmHi88IaUhY?si=fAZWxEhzYbklaRM6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Misc
 I started getting interested in forecasting a bit before I finished high school. I made [a Kalshi account](https://kalshi.com/ideas/profiles/youngneil) a few months ago, primarily betting on tech advancements.
