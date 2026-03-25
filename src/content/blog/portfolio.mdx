@@ -16,6 +16,9 @@ import radiancecollage from '../../images/blog/portfolio/radiance-collage.png';
 import renderfarm from '../../images/blog/portfolio/renderfarm.png';
 import editingfiles from '../../images/blog/portfolio/editing-files.png';
 import flowchart from '../../images/blog/portfolio/flowchart.png';
+import winchv1back from '../../images/blog/portfolio/winchv1-back.jpg';
+import winchv1front from '../../images/blog/portfolio/winchv1-front.jpg';
+import nmldesktop from '../../images/blog/portfolio/nml-desktop.png';
 
 # Portfolio
 
@@ -42,7 +45,8 @@ For embedded, I usually use PlatformIO or ESP-IDF - here's two respective exampl
 - https://github.com/redcathode/led-wall/blob/main/src/main.cpp
 - https://github.com/redcathode/blights_esp32_server/blob/main/main/esp_rest_main.c
 
-[Here's a desktop productivity app I made;](https://github.com/redcathode/NoMoreLeeches) it works on Windows and Linux (only X11/Xwayland) using FLTK/C++, plus platform-specific Xlib (C) and Win32 (C++) code. 
+<Picture src={nmldesktop} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="schematic"/>
+[Pictured above is a desktop productivity app I made;](https://github.com/redcathode/NoMoreLeeches) it works on Windows and Linux (only X11/Xwayland) using FLTK and platform-specific Xlib (C) and Win32 (C++) code. 
 
 This website was built with [Astro](https://astro.build), which, among other things, lets me have Markdown, JSX, and an [RSS feed](https://redcatho.de/blog/rss.xml), while still serving my website as static files - pretty neat!
 
@@ -73,7 +77,13 @@ I helped set up, manage, and maintain my school's 3D printing lab (around 8 Ende
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rmHi88IaUhY?si=fAZWxEhzYbklaRM6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Misc
+### Winch Robot
+<div style="display: flex; align-items: center; gap: 1rem;">
+    <Picture src={winchv1back} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="LED array - 3d printed module alongside a COB LED and water cooling block"/>
+    <Picture src={winchv1front} class="blogimage" quality="mid" formats={['avif', 'webp']} alt="LED array - 3d printed module alongside a COB LED and water cooling block"/>
+</div>
+In 2022 I thought up a design for a robot that manipulated itself on a 2D surface using 2 winches, and decided to try building one using what I had on me at the time. Here it is in operation:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bmuq3K8dU3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-
+### Kalshi
 I got interested in forecasting a bit before I finished high school. I made [a Kalshi account](https://kalshi.com/ideas/profiles/youngneil), and did a ~16x, but decided to take a break to focus on other pursuits.
